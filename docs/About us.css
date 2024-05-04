@@ -1,0 +1,169 @@
+.group-81,
+.group-81 * {
+  box-sizing: border-box;
+}
+.group-81 {
+  position: relative;
+}
+.rectangle-309 {
+  background: #d6d6d6;
+  width: 1440px;
+  height: 860px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-80 {
+  width: 450px;
+  height: 665px;
+  position: static;
+}
+.nav {
+  width: 450px;
+  height: 420px;
+  position: static;
+}
+.insights {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 43.48%;
+  left: 43.74%;
+  width: 12.78%;
+  bottom: 25.58%;
+  top: 68.6%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.our-clients {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 43.54%;
+  left: 43.82%;
+  width: 12.64%;
+  bottom: 34.19%;
+  top: 60%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 41.01%;
+  left: 41.42%;
+  width: 17.57%;
+  bottom: 42.79%;
+  top: 51.4%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.our-work {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 42.25%;
+  left: 42.41%;
+  width: 15.35%;
+  bottom: 51.4%;
+  top: 42.79%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 44.57%;
+  left: 44.8%;
+  width: 10.62%;
+  bottom: 60%;
+  top: 34.19%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 34.38%;
+  left: 34.38%;
+  width: 31.25%;
+  bottom: 68.6%;
+  top: 25.58%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us2 {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 400;
+  position: absolute;
+  right: 44.86%;
+  left: 45.28%;
+  width: 9.86%;
+  bottom: 84.65%;
+  top: 9.53%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back {
+  color: var(--tertiary-1, #151517);
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: 600;
+  position: absolute;
+  right: 47.64%;
+  left: 48.12%;
+  width: 4.24%;
+  bottom: 13.14%;
+  top: 81.05%;
+  height: 5.81%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
