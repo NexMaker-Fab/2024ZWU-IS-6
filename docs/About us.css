@@ -1,9 +1,25 @@
-.group-81,
-.group-81 * {
+.archivo-black-regular {
+        font-family: "Archivo Black", sans-serif !important;
+        font-weight: 400;
+        font-style: normal;
+      }
+  
+
+
+
+.menu-v-1-0,
+.menu-v-1-0 * {
   box-sizing: border-box;
 }
-.group-81 {
+.menu-v-1-0 {
+  background: var(--tertiary-5, #ffffff);
+  height: 860px;
   position: relative;
+  overflow: hidden;
+}
+.group-81 {
+  position: absolute;
+  inset: 0;
 }
 .rectangle-309 {
   background: #d6d6d6;
@@ -132,10 +148,9 @@
   justify-content: center;
 }
 .about-us2 {
-  color: var(--tertiary-1, #151517);
+  color: var(--tertiary-1, #333333);
   text-align: center;
-  font-family: "Poppins-Regular", sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 50px;
   font-weight: 400;
   position: absolute;
@@ -143,7 +158,7 @@
   left: 45.28%;
   width: 9.86%;
   bottom: 84.65%;
-  top: 9.53%;
+  top: 6.53%;
   height: 5.81%;
   display: flex;
   align-items: center;
@@ -167,3 +182,70 @@
   align-items: center;
   justify-content: center;
 }
+.rectangle-309 {
+    background: #d6d6d6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .menu-v-1-0 {
+    background: var(--tertiary-5, #ffffff);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .back  a {
+    color: #808080;   /* 灰色的十六进制代码 */
+    }
+
+    .nav-01, .company-name {
+        width: 1431px;
+        height: 506px;
+        position: absolute;
+        left: 165px;
+        top: 50px;
+
+      }
+      .menu a:visited {
+        color: #808080;   /* 这是一种灰色的十六进制代码 */
+    }
+    .nav a {
+        z-index: 9999; /* 9999是一个相对较大的值，通常可以让元素显示在最上层 */
+      }
+  /* 未被访问的链接 */
+a:link {
+    color: rgb(102, 102, 102);
+  }
+  
+  /* 用户鼠标悬停 */
+  a:hover {
+    color: darkgrey;
+  }
+  
+  /* 被访问的链接 */
+  a:visited {
+    color: rgb(95, 95, 95);
+  }
+  
+  /* 鼠标点击链接 */
+  a:active {
+    color: black;
+  }
+
+
+  .background {
+    background-image: url("https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/e87b4fc24cfb8028371459e13d12640302da61e814df3b-xQpTjE_fw1200_LE_auto_x2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }

@@ -46,3 +46,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 未被访问的链接 */
+a:link {
+    color: grey;
+  }
+  
+  /* 用户鼠标悬停 */
+  a:hover {
+    color: darkgrey;
+  }
+  
+  /* 被访问的链接 */
+  a:visited {
+    color: lightgrey;
+  }
+  
+  /* 鼠标点击链接 */
+  a:active {
+    color: black;
+  }
