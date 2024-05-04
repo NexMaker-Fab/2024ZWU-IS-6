@@ -14,7 +14,7 @@
   <div class="group-74">
     <div class="header-01">
       <div class="bg2"></div>
-      <div class="cta">
+      <div class="cta slide-in-anim-slow">
         <a href="all p.html">See All Projects</a>
         <div class="shapes">
           <img
@@ -23,7 +23,7 @@
         </div>
       </div>
       
-      <div class="we-are-some-digital-storytellar ">
+      <div class="we-are-some-digital-storytellar slide-in-anim">
         We Are 
         <br />
         NONE GROUP
@@ -31,23 +31,60 @@
     </div>
     <div class="nav-01">
       <div class="hire-us">
-        <div class="hire-us2 regular-text">
+        <div class="hire-us2 regular-text slide-in-anim-slowow">
         <a href="About us.html">About us</a>
       </div>
-      <div class="company-name">
+      <div class="company-name slide-in-anim-slowow">
         <div class="kraft-8 regular-text">MENU</div>
       </div>
     </div>
   </div>
 </div>
 
-
-<div class="marquee">
+<div class="fadeWrapper">
+  <div class="marquee">
   <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png"alt="your image">
   <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image">
  
+  </div>
 </div>
+<script>
+  const mousePointer = document.createElement('div');
+  mousePointer.className = 'mouse-pointer';
+  document.body.appendChild(mousePointer);
+
+  window.addEventListener('mousemove', function (e) {
+    mousePointer.style.left = `${e.pageX}px`;
+    mousePointer.style.top = `${e.pageY}px`;
+  });
   
+  const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+  
+  links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('large');
+    });
+  });
+
+  links.forEach(link => { 
+  link.addEventListener('mouseenter', () => {
+    mousePointer.classList.add('mouse-pointer-large');
+  });
+  link.addEventListener('mouseleave', () => {
+    mousePointer.classList.remove('mouse-pointer-large');
+  });
+});
+
+</script>
+
+
+
+
+
+
 </body>
 
 </html>

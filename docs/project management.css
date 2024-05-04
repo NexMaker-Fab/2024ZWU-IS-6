@@ -84,3 +84,31 @@ a:link {
   a:active {
     color: black;
   }
+  body {
+    cursor: none;
+  }
+  
+  .mouse-pointer{
+    pointer-events: none;
+    position: absolute;
+    user-select: none;
+    z-index: 9999;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(101, 163, 129, 0.726);
+    transition: width 0.3s, height 0.3s;
+  }
+  
+  a:hover .mouse-pointer{
+    width: 30px;
+    height: 30px;
+  }
+  .mouse-pointer-large {
+    width: 50px; /* 加大尺寸 */
+    height: 50px;
+    background-color: rgba(31, 165, 125, 0.733); /* 修改颜色为全黑 */
+  }
+  a {
+    cursor: none !important;
+  }

@@ -51,6 +51,7 @@
   bottom: 50%;
   top: 30.29%;
   overflow: hidden;
+  z-index :9999;
 }
 .cta a {
   color: #222222;   /* 灰色的十六进制代码 */
@@ -287,4 +288,71 @@ body {
 }
 
 
+body {
+  cursor: none;
+}
 
+.mouse-pointer{
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  z-index: 9999;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(101, 163, 129, 0.726);
+  transition: width 0.3s, height 0.3s;
+}
+
+a:hover .mouse-pointer{
+  width: 30px;
+  height: 30px;
+}
+.mouse-pointer-large {
+  width: 50px; /* 加大尺寸 */
+  height: 50px;
+  background-color: rgba(31, 165, 125, 0.733); /* 修改颜色为全黑 */
+}
+a {
+  cursor: none !important;
+}
+.slide-in-anim {
+  opacity: 0;
+  animation: slide-in 2s forwards;
+}
+
+
+@keyframes slide-in {
+0% {
+  transform: translateY(50px);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+.slide-in-anim-slow {
+  animation: slide-in 4s forwards; 
+}
+
+.slide-in-anim-slowow {
+  animation: slide-in 5s forwards; 
+}
+
+
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 8; }
+}
+
+.fadeWrapper {
+  pointer-events: none;
+}
+.fadeWrapper .marquee img {
+  pointer-events: auto;
+}
+.fadeWrapper * {
+  pointer-events: auto;
+}

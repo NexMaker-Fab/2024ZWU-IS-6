@@ -15,6 +15,37 @@
     Hello everybody,our team have no name
 </h2>
 
+<script>
+    const mousePointer = document.createElement('div');
+    mousePointer.className = 'mouse-pointer';
+    document.body.appendChild(mousePointer);
+  
+    window.addEventListener('mousemove', function (e) {
+      mousePointer.style.left = `${e.pageX}px`;
+      mousePointer.style.top = `${e.pageY}px`;
+    });
+    
+    const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+    
+    links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+      link.addEventListener('mouseenter', () => {
+        mousePointer.classList.add('large');
+      });
+      link.addEventListener('mouseleave', () => {
+        mousePointer.classList.remove('large');
+      });
+    });
+    
+    links.forEach(link => { 
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('mouse-pointer-large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('mouse-pointer-large');
+    });
+  });
+  
+  </script>
   
 </body>
 
