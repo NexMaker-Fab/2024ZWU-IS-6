@@ -43,10 +43,10 @@
 
 <div class="fadeWrapper">
   <div class="marquee">
-  <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png"alt="your image">
-  <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image">
- 
+    <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image">
+    <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image">
   </div>
+</div>
 </div>
 <script>
   const mousePointer = document.createElement('div');
@@ -77,6 +77,23 @@
     mousePointer.classList.remove('mouse-pointer-large');
   });
 });
+window.onload = function() {
+  const images = document.querySelectorAll('.marquee img');
+  let loadedImages = 0;
+
+  images.forEach((img) => {
+    img.onload = function() {
+      loadedImages++;
+
+      if (loadedImages == images.length) { // 已加载所有图片
+        let marquee = document.querySelector('.marquee');
+        marquee.style.opacity = 1;
+        marquee.classList.add('startAnimation');
+      }
+    };
+    img.src = img.src; // 重新设置src以触发onload事件
+  });
+};
 
 </script>
 

@@ -256,15 +256,14 @@ body {
   overflow: visible;
 }
 
-
 .marquee {
   position: absolute;
   top: 50%;
-  left: 0;        /* 将容器左侧位置调整为视口的左端 */
-  width: 200%;    /* 宽度调整为视口的两倍 */
+  left: 0;        
+  width: 200%;    
   height: auto;
-  display: flex;  /* 将容器设置为 flex，使得两个图片可以水平排列 */
-  animation: marquee 10s linear infinite;    /* 时间调整为原来的两倍 */
+  display: flex;  
+  opacity: 0;
 }
 
 .marquee img {
@@ -344,7 +343,7 @@ a {
 
 @keyframes fadein {
   0% { opacity: 0; }
-  100% { opacity: 8; }
+  100% { opacity: 1; }
 }
 
 .fadeWrapper {
@@ -355,4 +354,14 @@ a {
 }
 .fadeWrapper * {
   pointer-events: auto;
+}
+.marquee.startAnimation {
+  animation: marquee 10s linear infinite;   
+}
+
+.fadeWrapper {
+  animation: fadein 6s;
+}
+html{
+  overflow: hidden;  
 }

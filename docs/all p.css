@@ -414,3 +414,6 @@ a:link {
   a {
     cursor: none !important;
   }
+  html{
+    overflow: hidden;  
+ }

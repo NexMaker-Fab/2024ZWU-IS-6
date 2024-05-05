@@ -116,3 +116,6 @@ a:link {
     width: 100%;  /* 图片宽度为容器宽度 */
     height: auto; /* 高度自适应 */
 }
+html{
+    overflow: hidden;  
+ }
