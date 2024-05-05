@@ -60,7 +60,7 @@ body {
 .myImage {
     position: fixed;  
     bottom: 1px;  
-    right: 1095px;  
+    right: 1098px;  
     transform: scale(0.3); 
   }
 
@@ -112,3 +112,7 @@ a:link {
   a {
     cursor: none !important;
   }
+  .paper-image {
+    width: 100%;  /* 图片宽度为容器宽度 */
+    height: auto; /* 高度自适应 */
+}
