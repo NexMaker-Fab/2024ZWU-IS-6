@@ -365,3 +365,39 @@ a {
 html{
   overflow: hidden;  
 }
+
+/* 基本的滑动菜单样式 */
+.slide-menu {
+  position: fixed;
+  left: -250px; /* 初始时隐藏于视图之外 */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white; /* 设置背景色为白色 */
+  transition: left 0.3s; /* 平滑的过渡效果 */
+  display: flex; /* 使用Flexbox布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: start; /* 菜单项左对齐 */
+  padding-top: 20px; /* 菜单项距离顶部一定距离 */
+}
+
+/* 当菜单打开时应用这些样式 */
+.show-menu {
+  left: 0; /* 显示侧边菜单 */
+}
+
+/* 菜单项样式 */
+.slide-menu a {
+  text-decoration: none; /* 去除下划线 */
+  color: #333; /* 文字颜色，根据需要调整 */
+  display: block; /* 每个<a>标签占满一行 */
+  margin: 5px 0; /* 菜单项之间的间隔 */
+  padding: 10px 20px; /* 菜单项内填充，让文字有足够的空间 */
+  transition: background-color 0.3s; /* 鼠标悬浮到菜单项上时的背景颜色平滑过渡效果 */
+}
+
+/* 鼠标悬浮到菜单项上时的效果 */
+.slide-menu a:hover {
+  background-color: #f2f2f2; /* 悬浮效果颜色，根据需要调整 */
+}
+

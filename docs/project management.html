@@ -5,6 +5,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 </head>
 <body>
     <a href="index.html" class="corner-link top-left">Menu</a>
@@ -159,9 +161,129 @@ Firstly, register and establish a public repository on github.com for others to 
 <h5>-Add navigation bar and side bar/Document writing
     We have provided guidance for the sidebar and navigation bar through code.
    This is index.xml, with attached image code, This includes adding images, hyperlinks, and CSS animations.:</h5>
-   <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/%E4%BB%A3%E7%A0%811.png" class="paper-image"alt="pic">
-   <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/%E4%BB%A3%E7%A0%812.png" class="paper-image"alt="pic">
-   <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/%E4%BB%A3%E7%A0%813.png" class="paper-image"alt="pic">
+
+
+
+   <pre><code class="language-html">
+        
+        
+    &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Final project&lt;/title&gt;/* 网页标题*/
+&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;/* 链接css样式库*/
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;display=swap" rel="stylesheet"&gt;/* 链接字体库，用于添加字体*/
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class="background"&gt;
+&lt;div class="group-74"&gt;
+&lt;div class="header-01"&gt;
+  &lt;div class="bg2"&gt;&lt;/div&gt;
+  &lt;div class="cta slide-in-anim-slow"&gt;
+    &lt;a href="all p.html"&gt;See All Projects&lt;/a&gt;
+    &lt;div class="shapes"&gt;
+      &lt;img
+        class="ico-24-arrows-arrow-forward"
+        src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2586b18d1ef0d3852649923177fba185b0a1d5205f11-vsVZ0y_fw1200.png"/&gt;/* 添加图片*/
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="we-are-some-digital-storytellar slide-in-anim"&gt;/* 动画相关*/
+    We Are 
+    &lt;br /&gt;
+    NONE GROUP
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="nav-01"&gt;
+  &lt;div class="hire-us"&gt;
+    &lt;div class="hire-us2 regular-text slide-in-anim-slowow"&gt;/* 慢速滑入动画*/
+    &lt;a href="About us.html"&gt;About us&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="company-name slide-in-anim-slowow"&gt;
+    &lt;div class="kraft-8 regular-text"&gt;MENU&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fadeWrapper"&gt;
+&lt;div class="marquee"&gt;
+&lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;
+&lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const mousePointer = document.createElement('div');
+mousePointer.className = 'mouse-pointer';
+document.body.appendChild(mousePointer);
+
+window.addEventListener('mousemove', function (e) {
+mousePointer.style.left = `${e.pageX}px`;
+mousePointer.style.top = `${e.pageY}px`;
+});
+
+const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+
+links.forEach(link =&gt; { /* 对每个链接添加鼠标移入和移出事件 */
+link.addEventListener('mouseenter', () =&gt; {
+  mousePointer.classList.add('large');
+});
+link.addEventListener('mouseleave', () =&gt; {
+  mousePointer.classList.remove('large');
+});
+});
+
+links.forEach(link =&gt; { 
+link.addEventListener('mouseenter', () =&gt; {
+mousePointer.classList.add('mouse-pointer-large');
+});
+link.addEventListener('mouseleave', () =&gt; {
+mousePointer.classList.remove('mouse-pointer-large');
+});
+});
+window.onload = function() {
+const images = document.querySelectorAll('.marquee img');
+let loadedImages = 0;
+
+images.forEach((img) =&gt; {
+img.onload = function() {
+  loadedImages++;
+
+  if (loadedImages == images.length) { // 已加载所有图片
+    let marquee = document.querySelector('.marquee');
+    marquee.style.opacity = 1;
+    marquee.classList.add('startAnimation');
+  }
+};
+img.src = img.src; // 重新设置src以触发onload事件
+});
+};
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt
+
+
+
+
+
+
+
+
+</code></pre>
+
+
+
+
+
+
    <h5>-Add image
     We follow the website(https://www.nexmaker.com/doc/1projectmanage/imageuploadservice.html) posted by the teacher step by step
     <p></p>
@@ -194,15 +316,6 @@ Firstly, register and establish a public repository on github.com for others to 
     <h5>It may use 3D printed materials or other biodegradable materials</h5>
     <h3>Solve some problem in SDG</h3>
     <h5>Could be clean energy or underwater life</h5>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -279,6 +392,13 @@ Firstly, register and establish a public repository on github.com for others to 
 
 
 </script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+<!-- 调用highlight.js初始化函数 -->
+<script>hljs.initHighlightingOnLoad();</script>
 
 
 

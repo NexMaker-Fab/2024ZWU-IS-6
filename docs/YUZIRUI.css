@@ -1,0 +1,22 @@
+/* 这样会将所有h2元素的文字设置为红色 */
+h2 {
+    color: red;
+}
+
+
+body {
+    /* 设置背景图片 */
+    background-image: url('https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/31940c77dcd8891abf6b4938517e43efd6fbfdfe55929-3epe0r_LE_auto_custom.png');
+
+    /* 背景图不随滚动条滚动 */
+    background-attachment: fixed;
+
+    /* 背景图始终覆盖整个页面 */
+    background-size: cover;
+
+    /* 背景图居中显示 */
+    background-position: center center;
+
+    /* 确保文字颜色对比背景图清晰可见，根据你的背景图调整颜色 */
+    color: #ffffff;
+}

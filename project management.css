@@ -60,7 +60,7 @@ body {
 .myImage {
     position: fixed;  
     bottom: 1px;  
-    right: 1120px;  
+    right: 1098px;  
     transform: scale(0.3); 
   }
 
@@ -119,4 +119,3 @@ a:link {
 html{
     overflow: hidden;  
  }
-

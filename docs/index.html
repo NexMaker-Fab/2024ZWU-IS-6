@@ -35,11 +35,31 @@
         <a href="About us.html">About us</a>
       </div>
       <div class="company-name slide-in-anim-slowow">
-        <div class="kraft-8 regular-text">MENU</div>
+
+       <!-- 添加鼠标悬浮和移开事件 -->
+       <div class="kraft-8 regular-text" onmouseover="toggleMenu(true)" onmouseout="toggleMenu(false)">MENU</div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+       <!-- 侧边菜单 -->
+       <div class="slide-menu" id="menu"
+            onmouseover="keepMenuOpen(true)"
+            onmouseout="keepMenuOpen(false)">
+         <a href="#">Home</a>
+         <a href="about-us.html">About us</a>
+         <a href="services.html">Services</a>
+         <a href="contact.html">Contact</a>
+         <a href="portfolio.html">Portfolio</a>
+       </div>
+       
+
+
+
+
 
 <div class="fadeWrapper">
   <div class="marquee">
@@ -48,6 +68,8 @@
   </div>
 </div>
 </div>
+
+
 <script>
   const mousePointer = document.createElement('div');
   mousePointer.className = 'mouse-pointer';
@@ -95,12 +117,32 @@ window.onload = function() {
   });
 };
 
+
+let menuOpen = false;
+
+function toggleMenu(open) {
+  menuOpen = open; // 设置菜单当前状态
+  var menu = document.getElementById('menu');
+  if(menuOpen) {
+    menu.classList.add('show-menu'); // 显示菜单
+  } else {
+    // 延迟关闭菜单，为用户提供更好的体验
+    setTimeout(function () {
+      if (!menuOpen) { // 如果鼠标已经离开，再关闭菜单
+        menu.classList.remove('show-menu');
+      }
+    }, 500); // 延迟时间，单位是毫秒
+  }
+}
+
+function keepMenuOpen(open) {
+  menuOpen = open; // 更新状态
+  if(menuOpen) {
+    document.getElementById('menu').classList.add('show-menu');
+  }
+}
+
 </script>
-
-
-
-
-
 
 </body>
 
