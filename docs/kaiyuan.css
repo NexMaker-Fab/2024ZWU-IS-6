@@ -36,7 +36,7 @@ body {
     background-color: white;
     height: calc(100vh + 50px);  /*改为100vh，使纸张的高度与视口相等，再加上上面预留的距离，实现下段超出视口*/
     overflow-y: auto; 
-    width: 40%;  
+    width: 50%;  
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5); 
 }
@@ -60,7 +60,7 @@ body {
 .myImage {
     position: fixed;  
     bottom: 1px;  
-    right: 1120px;  
+    right: 1220px;  
     transform: scale(0.3); 
   }
 
