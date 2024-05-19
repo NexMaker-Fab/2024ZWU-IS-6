@@ -65,13 +65,19 @@
                 
                 Raspberry PI models include Model A, Model A+, Model B, Model B+, Model 2, Model 3, Model 3, Model 3, Compute Module, and Model 4, with performance and features varying by model.</h5>
                 </p> 
-                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-09%20002247.png?raw=true" class="paper-image" alt="pic">
+                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-13%20094334.png?raw=true" class="paper-image" alt="pic">
 
-                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-09%20002340.png?raw=true" class="paper-image" alt="pic">
+                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-13%20094530.png?raw=true" class="paper-image" alt="pic">
     
-                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-09%20002416.png?raw=true" class="paper-image" alt="pic">
+                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-13%20094706.png?raw=true" class="paper-image" alt="pic">
             
+                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-13%20094801.png?raw=true" class="paper-image" alt="pic">
+                <img src="https://github.com/zhu8811cxks/-/blob/main/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-13%20094841.png?raw=true" class="paper-image" alt="pic">
             </div>
+
+
+
+
 
 
         
@@ -84,82 +90,77 @@
 
 
 
+        <h3>Learn the Arduino IDE,coding method,hardware connect </h3>
 
 
+        <h4>·Arduino IDE</h4>
+        <h5>The Arduino IDE is an open-source integrated development environment for writing and uploading code to Arduino microcontroller boards. It provides an easy-to-use programming environment that allows you to write code for controlling and operating hardware. The Arduino programming language is based on the Processing language and is inspired by the Wiring framework, both of which are programming languages designed for artists and hobbyists.</h5>    
+              <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/OIP.jpg" class="paper-image" alt="pic">
 
 
-
-
-
-
-
-
-
-          <h3>Learn the Arduino IDE,coding method,hardware connect </h3>
-
-
-          <h4>·Arduino IDE</h4>
-          <h5>The Arduino IDE is an open-source integrated development environment for writing and uploading code to Arduino microcontroller boards. It provides an easy-to-use programming environment that allows you to write code for controlling and operating hardware. The Arduino programming language is based on the Processing language and is inspired by the Wiring framework, both of which are programming languages designed for artists and hobbyists.</h5>    
-                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/OIP.jpg" class="paper-image" alt="pic">
-
-
-                <h4>·Encoding Method</h4>
+              <h4>·Encoding Method</h4>
 <h5>When you open the Arduino IDE, you'll see that there are two basic functions:<p></p>
 ·setup(): This function is called once each time the power supply is powered to the Arduino board. It is mainly used to initialize variables, set pin patterns, start using library files, etc.</h5>
-<pre><code class="language-html">
-  void setup() {
-      // 初始化代码
-    }
-  </code></pre>
 <h5>·loop(): After setup(), the loop() function is called repeatedly, forming the main loop of the program. Here, you can continuously read sensor data, control motors, update displays, etc.</h5>
 <pre><code class="language-html">
-  void loop() {
-      // 持续运行的代码
-    }
-  </code></pre>
+void setup() {
+    // 初始化代码
+  }
+
+void loop() {
+    // 持续运行的代码
+  }
+</code></pre>
 <h5>Writing Arduino code typically involves setting up pin modes (input, output, input pull-ups) and then reading or writing to those pins, as well as optionally using serial communication to debug the code.v</h5>
-  <pre><code class="cpp">
-      int ledPin = 13;
+<pre><code class="cpp"></code>
+    int ledPin = 13;
 
-      void setup() {
-        pinMode(ledPin, OUTPUT);
-      }
-      
-      void loop() {
-        digitalWrite(ledPin, HIGH);   // 打开LED
-        delay(1000);                  // 等待一秒钟
-        digitalWrite(ledPin, LOW);    // 关闭LED
-        delay(1000);                  // 等待一秒钟
-      }
-      </code></pre>
-
-
-
-    <h4> ·Hardware connections</h4>
-    <h5>The Arduino microcontroller board is connected via multiple pins, which can be digital, analog, PWM, or specifically for communication. Depending on the program you write and the hardware you need to connect, you can connect components such as LEDs, sensors, motors, and more to these pins. Often, you'll also need to consider proper power management and possible electrical isolation.</h5>
-    <h5>The steps to connect the hardware typically include:</h5>
-   <h6> 1.Physically insert the component into the correct pins of an Arduino board or breadboard (depending on your project and design).
-    <p></p>
-    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/%E9%9D%A2%E5%8C%85%E6%9D%BF.jpg" class="paper-image" alt="pic">
-    <p></p>
-    2.Use jumpers to connect the component pins to the Arduino pins.
-    <p></p>
-    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/2.jpg" class="paper-image" alt="pic">
-    <p></p>
-    3.Ensure proper power and ground connections are provided.
-    <p></p>
-    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/3.png" class="paper-image" alt="pic">
-    <p></p>
-    4.For some components, such as motors and relays, external power supplies and protection components such as diodes and transistors may also be required.</h6>
-    <p></p>
-    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/4.jpg" class="paper-image" alt="pic">
-    <h5>Once the connection is complete, connect the Arduino to your computer via a USB cable and upload the code via the Arduino IDE.
-    <br>When designing circuits and writing code, it's important to follow good engineering practices to ensure that circuits are safe and reliable.</h5>
+    void setup() {
+      pinMode(ledPin, OUTPUT);
+    }
+    
+    void loop() {
+      digitalWrite(ledPin, HIGH);   // 打开LED
+      delay(1000);                  // 等待一秒钟
+      digitalWrite(ledPin, LOW);    // 关闭LED
+      delay(1000);                  // 等待一秒钟
+    }
+    </code></pre>
+    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/20200920200706577.png" class="paper-image" alt="pic">
+    <h6>https://img-blog.csdnimg.cn/20200920200706577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xod2FuZ2xlaQ==,size_16,color_FFFFFF,t_70#pic_center<h6/>
 
 
+  <h4> ·Hardware connections</h4>
+  <h5>The Arduino microcontroller board is connected via multiple pins, which can be digital, analog, PWM, or specifically for communication. Depending on the program you write and the hardware you need to connect, you can connect components such as LEDs, sensors, motors, and more to these pins. Often, you'll also need to consider proper power management and possible electrical isolation.</h5>
+  <h5>The steps to connect the hardware typically include:</h5>
+ <h6> 1.Physically insert the component into the correct pins of an Arduino board or breadboard (depending on your project and design).
+  <p></p>
+  <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/%E9%9D%A2%E5%8C%85%E6%9D%BF.jpg" class="paper-image" alt="pic">
+  <h6>https://th.bing.com/th/id/R.f19fdfa3e3347169866437b228520dae?rik=uOhY5UiGopltzw&pid=ImgRaw&r=0</h6>
+  <p></p>
+  2.Use jumpers to connect the component pins to the Arduino pins.
+  <p></p>
+  <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/2.jpg" class="paper-image" alt="pic">
+ <h6>https://th.bing.com/th/id/OIP.LTXSmwuymCoyzvDOU0ofiwHaHa?rs=1&pid=ImgDetMain</h6>
+  <p></p>
+  3.Ensure proper power and ground connections are provided.
+  <p></p>
+  <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/3.jpg" class="paper-image" alt="pic">
+  <h6>https://th.bing.com/th/id/OIP.K1ZjvdyF6rXEFL3NaVuq9gAAAA?rs=1&pid=ImgDetMain</h6>
+  <p></p>
+  4.For some components, such as motors and relays, external power supplies and protection components such as diodes and transistors may also be required.</h6>
+  <p></p>
+  <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/444.jpg" class="paper-image" alt="pic">
+  <h6>https://hackster.imgix.net/uploads/attachments/1281448/captura_de_tela_de_2021-04-03_15-41-48_HlcQ4TdNQ8.png</h6>
+  <h5>Once the connection is complete, connect the Arduino to your computer via a USB cable and upload the code via the Arduino IDE.
+  <br>When designing circuits and writing code, it's important to follow good engineering practices to ensure that circuits are safe and reliable.</h5>
 
 
-    <h2> Water light effect implementation </h2> 
+
+
+
+
+    <h1> Water light effect implementation </h1> 
     <p> This code belongs to an example program that uses Arduino to control 
 the NeoPixel LED light strip. Arduino is an easy to use and open source electronic prototyping 
 platform, while NeoPixel is a series of LED products produced by Adafruit Industries that have 
@@ -172,7 +173,25 @@ also have other effects, you can set yourself. </p>
     <p>1. Arduino UNO </p> 
     <p>2. Jumper </p> 
     <p>3. WS2812B RGB LED ring or NeoPixel LED light strip </p> 
-     
+    <h3>Arduino application process </h3> 
+    <p> Before you start programming, you need to install the Adafruit_NeoPixel 
+library. It can be found and installed in "Library Manager" in the Arduino IDE. </p>
+    <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/4.png" class="paper-image"alt="Arduino IDE库管理器">
+    
+    <h4> Install Adafruit_NeoPixel library file </h4> 
+    <p> In the Arduino IDE, click on "Tools" -> "Manage Library..." ", then type 
+"Adafruit NeoPixel" in the search box, find it and click "Install". </p>
+    <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/5.png" class="paper-image"alt="安装Adafruit_NeoPixel库">
+    
+    <h4> Open sample file </h4> 
+    <p> After installing the library file, select the sample you want to open in "File" -> "Example" -> "Adafruit NeoPixel". </p> 
+    <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/6.png"class="paper-image" alt="打开示例文件">
+    <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/7.png" class="paper-image"alt="打开示例文件">
+    <h4> Modify the file according to the characteristics of the equipment </h4> 
+    <p> An LED strip with eight beads is used here, so the number of leds in the 
+code and possible pin numbers need to be modified according to the actual device. </p> 
+    <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/8.png" class="paper-image"alt="根据器材修正文件">
+    
     <h2> Programming environment: </h2>
       <p>Arduino IDE</p>
       <pre style="background-color: #f7f7f7; border-left: 5px solid #e8e8e8; padding: 10px; overflow: auto; line-height: 1.5; font-family: Consolas, 'Courier New', monospace;">
@@ -381,33 +400,10 @@ connected and provide a visual guide for creating a physical prototype. You can 
       <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/1.png" class="paper-image"alt="Tinkercad设计图">
       <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/2.png" class="paper-image"alt="Tinkercad进阶设计图">
       <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/3.png" class="paper-image"alt="Tinkercad最终设计图">
-      <h3>Arduino application process </h3> 
-      <p> Before you start programming, you need to install the Adafruit_NeoPixel 
-library. It can be found and installed in "Library Manager" in the Arduino IDE. </p>
-      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/4.png" class="paper-image"alt="Arduino IDE库管理器">
-      
-      <h4> Install Adafruit_NeoPixel library file </h4> 
-      <p> In the Arduino IDE, click on "Tools" -> "Manage Library..." ", then type 
-"Adafruit NeoPixel" in the search box, find it and click "Install". </p>
-      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/5.png" class="paper-image"alt="安装Adafruit_NeoPixel库">
-      
-      <h4> Open sample file </h4> 
-      <p> After installing the library file, select the sample you want to open in "File" -> "Example" -> "Adafruit NeoPixel". </p> 
-      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/6.png"class="paper-image" alt="打开示例文件">
-      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/7.png" class="paper-image"alt="打开示例文件">
-      <h4> Modify the file according to the characteristics of the equipment </h4> 
-      <p> An LED strip with eight beads is used here, so the number of leds in the 
-code and possible pin numbers need to be modified according to the actual device. </p> 
-      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/8.png" class="paper-image"alt="根据器材修正文件">
      
-      <h2> Show </h2> 
-      <p> Once the code has been uploaded to the Arduino board, the LED strip 
-should display the set water light effect. This process may require some tuning, but as you 
-make adjustments in the code, you will see different lighting effects. </p> 
-      <video controls style="transform: rotate(270deg); width: 320px; position: relative; top: -120px; right: -135px; border: 3px solid #333; background-color: #999; box-shadow: 5px 5px 10px #666;">
-          <source src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/normal%20video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <h2>Show</h2>
+      <p>Once the code has been uploaded to the Arduino board, the LED strip should display the set water light effect. This process may require some tuning, but as you make adjustments in the code, you will see different lighting effects.</p>
+      <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/ezgif-3-e0b8ffe4841.gif" alt="Water Light Effect" style="width: 600px; border: 3px solid #333; background-color: #999; box-shadow: 5px 5px 10px #666;">
 
 
 

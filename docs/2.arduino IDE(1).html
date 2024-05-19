@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="2.arduino IDE.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+</head>
+<body>
+    <a href="index.html" class="corner-link top-left">Menu</a>
+    <a href="all p.html" class="corner-link top-right">Back</a>
+    <div class="paper">
+        <div class="text">
+
+          <h1>第二节课</h1>      
+          <h3>Learn the Arduino IDE,coding method,hardware connect </h3>
+
+
+          <h4>·Arduino IDE</h4>
+          <h5>The Arduino IDE is an open-source integrated development environment for writing and uploading code to Arduino microcontroller boards. It provides an easy-to-use programming environment that allows you to write code for controlling and operating hardware. The Arduino programming language is based on the Processing language and is inspired by the Wiring framework, both of which are programming languages designed for artists and hobbyists.</h5>    
+                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/OIP.jpg" class="paper-image" alt="pic">
+
+
+                <h4>·Encoding Method</h4>
+<h5>When you open the Arduino IDE, you'll see that there are two basic functions:<p></p>
+·setup(): This function is called once each time the power supply is powered to the Arduino board. It is mainly used to initialize variables, set pin patterns, start using library files, etc.</h5>
+<h5>·loop(): After setup(), the loop() function is called repeatedly, forming the main loop of the program. Here, you can continuously read sensor data, control motors, update displays, etc.</h5>
+<pre><code class="language-html">
+  void setup() {
+      // 初始化代码
+    }
+
+  void loop() {
+      // 持续运行的代码
+    }
+  </code></pre>
+<h5>Writing Arduino code typically involves setting up pin modes (input, output, input pull-ups) and then reading or writing to those pins, as well as optionally using serial communication to debug the code.v</h5>
+  <pre><code class="cpp"></code>
+      int ledPin = 13;
+
+      void setup() {
+        pinMode(ledPin, OUTPUT);
+      }
+      
+      void loop() {
+        digitalWrite(ledPin, HIGH);   // 打开LED
+        delay(1000);                  // 等待一秒钟
+        digitalWrite(ledPin, LOW);    // 关闭LED
+        delay(1000);                  // 等待一秒钟
+      }
+      </code></pre>
+      <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/20200920200706577.png" class="paper-image" alt="pic">
+      <h6>https://img-blog.csdnimg.cn/20200920200706577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xod2FuZ2xlaQ==,size_16,color_FFFFFF,t_70#pic_center<h6/>
+
+
+    <h4> ·Hardware connections</h4>
+    <h5>The Arduino microcontroller board is connected via multiple pins, which can be digital, analog, PWM, or specifically for communication. Depending on the program you write and the hardware you need to connect, you can connect components such as LEDs, sensors, motors, and more to these pins. Often, you'll also need to consider proper power management and possible electrical isolation.</h5>
+    <h5>The steps to connect the hardware typically include:</h5>
+   <h6> 1.Physically insert the component into the correct pins of an Arduino board or breadboard (depending on your project and design).
+    <p></p>
+    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/%E9%9D%A2%E5%8C%85%E6%9D%BF.jpg" class="paper-image" alt="pic">
+    <h6>https://th.bing.com/th/id/R.f19fdfa3e3347169866437b228520dae?rik=uOhY5UiGopltzw&pid=ImgRaw&r=0</h6>
+    <p></p>
+    2.Use jumpers to connect the component pins to the Arduino pins.
+    <p></p>
+    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/2.jpg" class="paper-image" alt="pic">
+   <h6>https://th.bing.com/th/id/OIP.LTXSmwuymCoyzvDOU0ofiwHaHa?rs=1&pid=ImgDetMain</h6>
+    <p></p>
+    3.Ensure proper power and ground connections are provided.
+    <p></p>
+    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/3.jpg" class="paper-image" alt="pic">
+    <h6>https://th.bing.com/th/id/OIP.K1ZjvdyF6rXEFL3NaVuq9gAAAA?rs=1&pid=ImgDetMain</h6>
+    <p></p>
+    4.For some components, such as motors and relays, external power supplies and protection components such as diodes and transistors may also be required.</h6>
+    <p></p>
+    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/444.jpg" class="paper-image" alt="pic">
+    <h6>https://hackster.imgix.net/uploads/attachments/1281448/captura_de_tela_de_2021-04-03_15-41-48_HlcQ4TdNQ8.png</h6>
+    <h5>Once the connection is complete, connect the Arduino to your computer via a USB cable and upload the code via the Arduino IDE.
+    <br>When designing circuits and writing code, it's important to follow good engineering practices to ensure that circuits are safe and reliable.</h5>
+
+        </div>
+      </div>
+      <img class="myImage" src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/e87b4fc24cfb8028371459e13d12640302da61e814df3b-xQpTjE_fw1200_LE_auto_x2_LE_auto_x2.png"/>
+
+      <div id="particles-js"></div>
+
+<!-- 加载粒子库 -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- 配置和运行粒子效果 -->
+<script>  
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 30, density: { enable: true, value_area: 800 } }, //将粒子数量更改为100
+            color: { value: '#ffaa00' },
+            shape: { type: 'circle' },
+            opacity: { 
+                value: 0.5, 
+                random: true, 
+                anim: { 
+                    enable: true, // 开启动态改变透明度
+                    speed: 1, // 闪烁速度，数值越高，闪烁频率越高
+                    opacity_min: 0.1, 
+                    sync: false 
+                } 
+            },
+            size: { 
+                value: 6, // 改变粒子最大尺寸
+                random: true, // 尺寸随机
+                anim: { enable: true, speed: 3, size_min: 2} // 开启动态改变尺寸
+            },
+            line_linked: { enable: false },
+            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 } }
+        },
+        retina_detect: true
+    });
+    const mousePointer = document.createElement('div');
+    mousePointer.className = 'mouse-pointer';
+    document.body.appendChild(mousePointer);
+  
+    window.addEventListener('mousemove', function (e) {
+      mousePointer.style.left = `${e.pageX}px`;
+      mousePointer.style.top = `${e.pageY}px`;
+    });
+    
+    const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+    
+    links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+      link.addEventListener('mouseenter', () => {
+        mousePointer.classList.add('large');
+      });
+      link.addEventListener('mouseleave', () => {
+        mousePointer.classList.remove('large');
+      });
+    });
+    
+    links.forEach(link => { 
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('mouse-pointer-large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('mouse-pointer-large');
+    });
+  });
+  
+
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script> <!-- 调用highlight.js来应用高亮效果 -->
+
+
+</body>
+</html>
+
+
