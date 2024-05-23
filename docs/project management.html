@@ -168,109 +168,99 @@ Firstly, register and establish a public repository on github.com for others to 
         
         
     &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-&lt;title&gt;Final project&lt;/title&gt;/* 网页标题*/
-&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;/* 链接css样式库*/
-&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;display=swap" rel="stylesheet"&gt;/* 链接字体库，用于添加字体*/
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div class="background"&gt;
-&lt;div class="group-74"&gt;
-&lt;div class="header-01"&gt;
-  &lt;div class="bg2"&gt;&lt;/div&gt;
-  &lt;div class="cta slide-in-anim-slow"&gt;
-    &lt;a href="all p.html"&gt;See All Projects&lt;/a&gt;
-    &lt;div class="shapes"&gt;
-      &lt;img
-        class="ico-24-arrows-arrow-forward"
-        src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2586b18d1ef0d3852649923177fba185b0a1d5205f11-vsVZ0y_fw1200.png"/&gt;/* 添加图片*/
+    &lt;html&gt;
+    
+    &lt;head&gt;
+    &lt;title&gt;Final project&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;!-- 链接外部CSS样式表，用于美化网页 --
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;!-- 提前与谷歌字体服务器建立连接，加快字体加载速度 --
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;display=swap" rel="stylesheet"&gt;!-- 从Google字体导入Archivo Black字体，用于网页中的文本显示 --
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    &lt;div class="background"&gt;!-- 最外层背景容器，设置网页背景样式 --
+    &lt;div class="group-74"&gt;
+    &lt;div class="header-01"&gt;
+      &lt;div class="bg2"&gt;&lt;/div&gt;
+      &lt;div class="cta slide-in-anim-slow"&gt;!-- 带有缓慢滑入动画的调用操作按钮容器 --
+        &lt;a href="all p.html"&gt;See All Projects&lt;/a&gt;!-- 一个链接，点击后跳转到介绍所有项目的页面 --
+        &lt;div class="shapes"&gt;
+          &lt;img
+            class="ico-24-arrows-arrow-forward"
+            src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2586b18d1ef0d3852649923177fba185b0a1d5205f11-vsVZ0y_fw1200.png"&gt;!-- 添加向左的按钮icon图片 --
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="we-are-some-digital-storytellar slide-in-anim"&gt;!-- 带有滑入动画的介绍文字容器 --
+        We Are 
+        &lt;br /&gt;
+        NONE GROUP
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class="we-are-some-digital-storytellar slide-in-anim"&gt;/* 动画相关*/
-    We Are 
-    &lt;br /&gt;
-    NONE GROUP
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="nav-01"&gt;
-  &lt;div class="hire-us"&gt;
-    &lt;div class="hire-us2 regular-text slide-in-anim-slowow"&gt;/* 慢速滑入动画*/
-    &lt;a href="About us.html"&gt;About us&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class="company-name slide-in-anim-slowow"&gt;
-    &lt;div class="kraft-8 regular-text"&gt;MENU&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="fadeWrapper"&gt;
-&lt;div class="marquee"&gt;
-&lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;
-&lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-const mousePointer = document.createElement('div');
-mousePointer.className = 'mouse-pointer';
-document.body.appendChild(mousePointer);
-
-window.addEventListener('mousemove', function (e) {
-mousePointer.style.left = `${e.pageX}px`;
-mousePointer.style.top = `${e.pageY}px`;
-});
-
-const links = document.querySelectorAll('a');  /* 选择所有超链接 */
-
-links.forEach(link =&gt; { /* 对每个链接添加鼠标移入和移出事件 */
-link.addEventListener('mouseenter', () =&gt; {
-  mousePointer.classList.add('large');
-});
-link.addEventListener('mouseleave', () =&gt; {
-  mousePointer.classList.remove('large');
-});
-});
-
-links.forEach(link =&gt; { 
-link.addEventListener('mouseenter', () =&gt; {
-mousePointer.classList.add('mouse-pointer-large');
-});
-link.addEventListener('mouseleave', () =&gt; {
-mousePointer.classList.remove('mouse-pointer-large');
-});
-});
-window.onload = function() {
-const images = document.querySelectorAll('.marquee img');
-let loadedImages = 0;
-
-images.forEach((img) =&gt; {
-img.onload = function() {
-  loadedImages++;
-
-  if (loadedImages == images.length) { // 已加载所有图片
-    let marquee = document.querySelector('.marquee');
-    marquee.style.opacity = 1;
-    marquee.classList.add('startAnimation');
-  }
-};
-img.src = img.src; // 重新设置src以触发onload事件
-});
-};
-
-&lt;/script&gt;
-
-&lt;/body&gt;
-
-&lt;/html&gt
-
-
+    &lt;div class="nav-01"&gt;
+      &lt;div class="hire-us"&gt;
+        &lt;div class="hire-us2 regular-text slide-in-anim-slowow"&gt;!-- 内部的导航项，带有滑入动画，用于链接到“关于我们”的页面 --
+        &lt;a href="About us.html"&gt;About us&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="company-name slide-in-anim-slowow"&gt;
+        &lt;div class="kraft-8 regular-text"&gt;MENU&lt;/div&gt;!-- 显示“菜单”字样，是可点击元素用于展开或关闭导航菜单 --
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="fadeWrapper"&gt;!-- 用于包裹需要淡入淡出效果的元素的容器 --
+    &lt;div class="marquee"&gt;
+    &lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;!-- 滚动条中的图像，会重复出现以创建持续的滚动视觉效果 ！！！！　　--
+    &lt;img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/2.png" alt="your image"&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+    const mousePointer = document.createElement('div');-- 创建一个新的div元素用于自定义鼠标指针 --
+    mousePointer.className = 'mouse-pointer';-- 给新创建的div元素添加类名 --
+    document.body.appendChild(mousePointer);-- 将该div元素添加到body中，确保能在整个页面中显示 --
+    
+    window.addEventListener('mousemove', function (e) { !-- 监听鼠标移动事件 --
+    mousePointer.style.left = `${e.pageX}px`; !-- 根据鼠标位置更新自定义指针的left值 --
+    mousePointer.style.top = `${e.pageY}px`; !-- 根据鼠标位置更新自定义指针的top值 --
+    });
+    
+    const links = document.querySelectorAll('a');  !-- 选择页面上所有的<a>元素 --
+    
+    links.forEach(link => { !-- 为每个链接添加事件监听 --
+    link.addEventListener('mouseenter', () => { -- 当鼠标进入链接时 --
+      mousePointer.classList.add('large'); -- 自定义鼠标指针变大 --
+    });
+    link.addEventListener('mouseleave', () => { -- 当鼠标离开链接时 --
+      mousePointer.classList.remove('large'); -- 自定义鼠标指针恢复原状 -
+    });
+    });
+    
+    window.onload = function() { -- 当页面加载完成后执行 --
+    const images = document.querySelectorAll('.marquee img'); -- 选择所有滚动图像 --
+    let loadedImages = 0; -- 计数器，用于跟踪已加载的图像数量 --
+    
+    images.forEach((img) => { -- 为每个图像设置onload事件 --
+    img.onload = function() { -- 当图像加载完成时 --
+      loadedImages++; -- 增加计数器 --
+    
+      if (loadedImages == images.length) { -- 如果所有图像都已加载 --
+        let marquee = document.querySelector('.marquee'); -- 选取滚动视图容器 --
+        marquee.style.opacity = 1; -- 将其不透明度设置为1，使其完全可见 --
+        marquee.classList.add('startAnimation'); -- 添加动画开始的类 --
+      }
+    };
+    img.src = img.src; -- 重新设置src以触发onload事件，确保图像加载 --
+    });
+    };
+    
+    &lt;/script&gt;
+    
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
 
 
 
