@@ -30,6 +30,30 @@ body {
     justify-content: center;
 }
 
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+}
+.comment {
+color: #6a9955; /* 绿色 */
+}
+.keyword {
+color: #0000ff; /* 蓝色 */
+}
+.number {
+color: #ff00ff; /* 品红色 */
+}
+.function {
+color: #d6336c; /* 紫红色 */
+}
+.string {
+color: #a31515; /* 暗红色 */
+}
+
+
+
 .paper {
     position: absolute; /*改position为absolute，使元素相对于body定位*/
     top: 50px; /*这里的50px是纸张与顶部的距离，你可以根据需要自行调整该值*/
