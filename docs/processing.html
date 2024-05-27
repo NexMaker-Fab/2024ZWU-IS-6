@@ -15,7 +15,47 @@
         <div class="text">
 
 
+          <h1>a tool similar with processing--p5.js
+            <h3>P5.js is a creative programming framework based on JavaScript, aimed at making programming more accessible and interesting.
+            <h3>It is based on the ideas and syntax of Processing and provides a simple and easy-to-use API, allowing users to easily create interactive works, visual arts, and data visualization projects.
+            <h3>Through p5.js, users can use JavaScript language to draw graphics, create animations, process user input, etc., without the need to learn complex graphics libraries or computer graphics knowledge. 
+            <h3>P5.js emphasizes the core idea of creative programming, encouraging users to express their ideas and creativity through programming, thereby promoting the process of learning and exploration.P5.js provides rich documentation and examples to help users quickly get started and start creating their own projects. It is widely used in various fields such as education, art creation, and visual design, and is loved by many creative professionals and programming enthusiasts.Overall, P5.js is a powerful and flexible tool that provides an ideal platform for those interested in creative programming and visual arts, allowing them to explore and implement their creative ideas through programming.
+            <img src="https://github.com/xiixiiiii/xiix/blob/main/6b3e1182fed5e7aefa72d86fe83cdb88.jpg?raw=true" alt="Demo Animation" style="max-width: 100%; height: auto;">
 
+
+
+
+
+            <h4>Do one demo in processing which can use mouse or keyboard to interactive</h4>
+    
+            <h5>Moving the mouse changes the position and size of each box.Use the mouse to interact, below is the code and comments, and there are video effects.</h5>
+             
+            <pre style="background-color: #f3f3f3; padding: 10px;">
+              <code>
+                  <span style="color: #d00;">void</span> setup() {
+                      size(<span style="color: #00d;">640</span>, <span style="color: #00d;">360</span>); 
+                      noStroke();
+                      rectMode(CENTER); <span style="color: #777; font-style: italic;">// Set mode for drawing rectangles</span>
+                  }
+          
+                  <span style="color: #d00;">void</span> draw() {
+                      background(<span style="color: #00d;">51</span>); 
+                      fill(<span style="color: #00d;">255</span>, <span style="color: #00d;">204</span>); <span style="color: #777; font-style: italic;">// Set fill with transparency</span>
+                      rect(mouseX, height/<span style="color: #00d;">2</span>, mouseY/<span style="color: #00d;">2</span>+<span style="color: #00d;">10</span>, mouseY/<span style="color: #00d;">2</span>+<span style="color: #00d;">10</span>); <span style="color: #777; font-style: italic;">// Rect follows mouse on x-axis</span>
+                      fill(<span style="color: #00d;">255</span>, <span style="color: #00d;">204</span>); <span style="color: #777; font-style: italic;">// Set fill with transparency</span>
+                      <span style="color: #00979c;">int</span> inverseX = width-mouseX; <span style="color: #777; font-style: italic;">// Inverted x-coordinate</span>
+                      <span style="color: #00979c;">int</span> inverseY = height-mouseY; <span style="color: #777; font-style: italic;">// Inverted y-coordinate</span>
+                      rect(inverseX, height/<span style="color: #00d;">2</span>, (inverseY/<span style="color: #00d;">2</span>)+<span style="color: #00d;">10</span>, (inverseY/<span style="color: #00d;">2</span>)+<span style="color: #00d;">10</span>); <span style="color: #777; font-style: italic;">// Rect mirrors the first</span>
+                  }
+              </code>
+          </pre>
+                  <img src="https://raw.githubusercontent.com/zhu8811cxks/-/main/img/13361185760657301.gif" class="paper-image" alt="pic">
+                  
+      
+                  <img class="myImage" src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/e87b4fc24cfb8028371459e13d12640302da61e814df3b-xQpTjE_fw1200_LE_auto_x2_LE_auto_x2.png"/>
+            
+                  <div id="particles-js"></div>
+            
 
 
 
