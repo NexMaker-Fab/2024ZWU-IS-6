@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="project management.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入prism.js的样式文件 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- 选择你喜爱的主题，可以到prism.js的官网更换不同的主题 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+</head>
+<body>
+    <a href="index.html" class="corner-link top-left">Menu</a>
+    <a href="see all p.html" class="corner-link top-right">Back</a>
+    <div class="paper">
+        <div class="text">
+
+
+
+          <h1>Arduino Input</h1>
+
+          <div class="section">
+            <h2>Arduino Nano Connection Instructions</h2>
+
+            <h3>TDS Sensor:</h3>
+            <ul>
+                <li>The signal wire of the TDS sensor connects to the A1 analog input on the Arduino Nano.</li>
+                <li>The GND (ground) of the TDS sensor connects to the GND on the Arduino Nano.</li>
+                <li>The VCC (positive power supply) of the TDS sensor connects to the 5V pin on the Arduino Nano.</li>
+            </ul>
+            
+            <h3>OLED Screen (Using U8G2 Library):</h3>
+            <ul>
+                <li>The SCL (clock line) of the OLED screen connects to A5 (I2C clock line SCL) on the Arduino Nano.</li>
+                <li>The SDA (data line) of the OLED screen connects to A4 (I2C data line SDA) on the Arduino Nano.</li>
+                <li>The GND (ground) of the OLED screen connects to the GND on the Arduino Nano.</li>
+                <li>The VCC (positive power supply) of the OLED screen connects to either 3.3V or 5V on the Arduino Nano (depending on the screen's voltage requirements; if 5V is required, connect to 5V).</li>
+            </ul>
+              <!-- 在这里插入接线图的图片 -->
+              <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/7a702d8dd366659fd5431574d7fc5c0.jpg" class="paper-image" alt="pic">
+          </div>
+      
+          <div class="section">
+              <h2>2. principle</h2>
+              <p>The project Principle section details how the project works, including how the TDS sensor works and how to identify different liquids by the detected conductivity.</p>
+          </div>
+      
+          <div class="section">
+              <h2>3. Code introduction</h2>
+              <p>Below is the complete Arduino code for controlling the different liquid types displayed on the OLED screen.</p>
+              <pre><code class="language-cpp">
+                #include <U8g2lib.h> // 包含U8g2图形库用于控制OLED屏幕
+                  #include <Wire.h>   // 包含Wire库以使用I2C通信
+                  
+                  // OLED
+                  U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); // 创建U8G2对象以操作OLED
+                  
+                  // TDS传感器配置
+                  #define TdsSensorPin A1 // TDS传感器连接到模拟输入A1
+                  #define VREF 5.0        // 参考电压
+                  #define SCOUNT 10       // 采样次数，减少采样次数以加快响应时间
+                  int analogBuffer[SCOUNT]; // 存储采样的数组
+                  int analogBufferIndex = 0; // 当前采样索引
+                  
+                  void setup() {
+                    Serial.begin(115200); // 初始化串行通信
+                    pinMode(TdsSensorPin, INPUT); // 设置TDS传感器引脚为输入模式
+                    u8g2.begin(); // 初始化OLED屏幕
+                  }
+                  
+                  void loop() {
+                    static unsigned long lastTime = millis(); // 记录上次读数的时间
+                    // 采样TDS值
+                    if (analogBufferIndex < SCOUNT) {
+                      analogBuffer[analogBufferIndex] = analogRead(TdsSensorPin); // 读取当前TDS值
+                      analogBufferIndex++;
+                    } else {
+                      int sum = 0;
+                      for (int i = 0; i < SCOUNT; i++) {
+                        sum += analogBuffer[i];
+                      }
+                      float averageVoltage = sum / (float)SCOUNT * (float)VREF / 1024.0;
+                      float tdsValue = averageVoltage * 2000.0; // 简化的TDS计算（没有温度补偿）
+                  
+                      displayTDSInfo(tdsValue);
+                  
+                      analogBufferIndex = 0;
+                    }
+                  
+                    // 使用非阻塞延迟以减少延迟
+                    unsigned long currentTime = millis();
+                    if (currentTime - lastTime > 200) { // 每200毫秒采样一次
+                      lastTime = currentTime;
+                      analogBufferIndex = 0;
+                    }
+                  }
+                  
+                  void displayTDSInfo(float tdsValue) {
+                    // 根据TDS值选择显示的信息
+                    const char* detectedLiquid;
+                    if (tdsValue >= 200 && tdsValue <= 900){
+                      // TDS值在10到80之间，显示牛奶信息
+                      detectedLiquid = "MILK Detected";
+                    } else if (tdsValue > 900 && tdsValue <= 1500) {
+                      // TDS值超过80，显示咖啡信息
+                      detectedLiquid = "VINEGAR Detected";
+                    } else if (tdsValue > 1900 && tdsValue <= 2800){
+                      detectedLiquid = "Alcohol Detected";
+                    }else if (tdsValue > 2501 && tdsValue <= 5000){
+                      detectedLiquid = "Coffee Detected";
+                    }else {
+                      detectedLiquid = "Liquid not recognized";  
+                    }
+                    // 通过串口输出TDS值和检测到的液体类型
+                    Serial.print("TDS Value: ");
+                    Serial.print(tdsValue);
+                    Serial.print(" - ");
+                    Serial.println(detectedLiquid);
+                  
+                    // 清除OLED屏幕
+                    u8g2.clearBuffer();
+                    // 设置字体
+                    u8g2.setFont(u8g2_font_ncenB08_tr);
+                  
+                    // 将TDS值和检测到的液体类型显示在OLED屏幕上
+                    u8g2.setCursor(0, 24);
+                    u8g2.print("TDS Value: ");
+                    u8g2.print(tdsValue);
+                    u8g2.setCursor(0, 40);
+                    u8g2.print(detectedLiquid);
+                  
+                    // 发送缓冲区的内容到OLED屏幕上显示
+                    u8g2.sendBuffer();
+                  }
+                </code></pre>
+          </div>
+      
+          <div class="section">
+              <h2>4. Sum up</h2>
+              <p>This project uses TDS sensors to detect different liquids and display the results. The aim is to provide a convenient on-site real-time monitoring scheme for laboratory testing.</p>
+          </div>
+
+          <div class="section">
+            <h2>5.show</h2>
+            <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/19b689673dc07ef06b8aaf69882ac6e.jpg" class="paper-image" alt="pic">
+
+        </div>
+
+
+  <div id="particles-js"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<!-- 不要忘记引入C++语言的高亮插件 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+<!-- 加载粒子库 -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- 配置和运行粒子效果 -->
+<script>  
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 30, density: { enable: true, value_area: 800 } }, //将粒子数量更改为100
+            color: { value: '#ffaa00' },
+            shape: { type: 'circle' },
+            opacity: { 
+                value: 0.5, 
+                random: true, 
+                anim: { 
+                    enable: true, // 开启动态改变透明度
+                    speed: 1, // 闪烁速度，数值越高，闪烁频率越高
+                    opacity_min: 0.1, 
+                    sync: false 
+                } 
+            },
+            size: { 
+                value: 6, // 改变粒子最大尺寸
+                random: true, // 尺寸随机
+                anim: { enable: true, speed: 3, size_min: 2} // 开启动态改变尺寸
+            },
+            line_linked: { enable: false },
+            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 } }
+        },
+        retina_detect: true
+    });
+    const mousePointer = document.createElement('div');
+    mousePointer.className = 'mouse-pointer';
+    document.body.appendChild(mousePointer);
+  
+    window.addEventListener('mousemove', function (e) {
+      mousePointer.style.left = `${e.pageX}px`;
+      mousePointer.style.top = `${e.pageY}px`;
+    });
+    
+    const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+    
+    links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+      link.addEventListener('mouseenter', () => {
+        mousePointer.classList.add('large');
+      });
+      link.addEventListener('mouseleave', () => {
+        mousePointer.classList.remove('large');
+      });
+    });
+    
+    links.forEach(link => { 
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('mouse-pointer-large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('mouse-pointer-large');
+    });
+  });
+  
+
+
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+<!-- 调用highlight.js初始化函数 -->
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
+
