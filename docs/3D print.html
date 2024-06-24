@@ -40,15 +40,52 @@
 
 
 
+
           <h3>Use slice software to set parameters
             <h4>Step1:Choose the correct printer.</h4>
             <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240614121357.png?raw=true"class="paper-image" alt="pic">
             <h4>Step2:Change to "Nomal".</h4>
             <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240614121410.png?raw=true"class="paper-image" alt="pic">
             <h4>Step3:Change the wall thickness to the appropriate value.</h4>
-            <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240614121421.png?raw=true"class="paper-image" alt="pic">
+           
             <h4>Step4:Change the top thickness to the appropriate value.</h4>
-            <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240614121431.png?raw=true"class="paper-image" alt="pic">
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Simple Table</title>
+                <style>
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        border: 1px solid black;
+                        padding: 10px;
+                        text-align: left;
+                    }
+                </style>
+            </head>
+            <body>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>value</th>
+                   
+                    </tr>
+                    <tr>
+                        <td>wall thickness</td>
+                        <td>1.6</td>
+                  
+                    </tr>
+                    <tr>
+                        <td>top thickness</td>
+                        <td>2.0</td>
+                      
+                    </tr>
+                   
+                </table>
+            </body>
+            </html>
             <h4>Step5:After completing all the numerical settings and Click "Slice".</h4>
             <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240614121442.png?raw=true"class="paper-image" alt="pic">
             <h4>Step6:Finally export the gcode file.</h4>
@@ -67,9 +104,8 @@
             <h4>Step5:End printing.
         <h3>Postprocess the surface
         <p>
-            <h4>1.Model coloring: 
-                including spray painting and hand painting methods. The spray painting method is suitable for coloring small models or fine parts, and a trial spray is required before operation to test the concentration. The hand coating method is suitable for handling complex details, and attention should be paid to pigment dilution to ensure uniform color.
-                <h4>2.Remove support:
+            
+                <h4>1.Remove support:
                 Prints with support material will require post-processing to remove the support structures. This can be achieved by breaking the support structures from the build material.
                 Tear the inner support structure
                 Start by removing the walls of the support structure with gripping pliers. This allows you to quickly tear away the majority of the inner support structure. 
@@ -77,62 +113,50 @@
                 After removing most of the support structure, the remaining part(s) can be pulled from the build material. Use cutting pliers to grab the Breakaway support in a corner and try to carefully get underneath it, then bend it upwards. Repeat this for several corners, so that you can loosen the support from the model around the corners. After this, pull the Breakaway support from the model.
                 Peel the last traces from the model
                 Sometimes a final layer of the support material will remain after pulling the Breakaway support from the build material. If this happens, use cutting pliers to peel it off from a loose edge. Any leftover traces on the model can be removed with tweezers.
+                <h4> 2.Model coloring: 
+                including spray painting and hand painting methods. The spray painting method is suitable for coloring small models or fine parts, and a trial spray is required before operation to test the concentration. The hand coating method is suitable for handling complex details, and attention should be paid to pigment dilution to ensure uniform color.
                 <h4>3. Polish model:
                  We would use sandpaper to polish model with water ,choice sandpaper 180 for rough polish, 240 for polish and 320 for finish polish  The following is the result 
-                3D model :https://a360.co/2MZ0cBf
-                <h4>4. Painting:
-                  polish,painting and assemble for the final prototype.
-                <h4>5. Varnish(from translucent to transparent ):
-                 This method need use professional Polish mehtod （sandpaper polish at least P800 ）and then varnish.
-            
-        </p>
+                3D model .
+
+          
 
 
 
-        <h3>5.New research applications  </h3>   
-        <h5>Reference</h5> <a href="https://new.qq.com/rain/a/20231129A011EG00">https://new.qq.com/rain/a/20231129A011EG00</a>
-        <h4>Nature: Ropin multi-material 3D printing, extending the existing printing details to smaller details than the "voxels"</h4>
-        <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/641.webp" class="paper-image" alt="pic">
-        <h5>From Harvard University John Paulson school of engineering and applied science and biological inspired engineering institute of researchers will combine material and rotating two elements and applied in the 3D printing technology, created a new type of rotating material 3D printing platform (RM-3DP), implements the subelement control in the 3D printing filament. Moreover, this method was used to create a high-fidelity spiral dielectric elastomer actuator, which enables the development of functional artificial muscles. In addition, the team created layered lattices that used structured spiral pillars to embed rigid springs in flexible frames, opening a new way for biomimetic multifunctional materials.</h5>
-        <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/0.gif" class="paper-image" alt="pic">
-        <h4>Subvoxel manufacturing</h4>
-        <h5>It is understood that the RM-3DP has two characteristics:<p></p>
-            1. Multi-material nozzle with azimuthal heterogenous subvoxel characteristics<p></p>
-            2. The print head is equipped with multiple pressure-controlled ink slots and the nozzle free rotation function</h5>
-            <h5>The printing mode of RM-3DP combines melting deposition and light curing. In terms of structure, the FDM gantry control system is selected, while in terms of printing materials, polydimethylsiloxane (PDMS) or other oligomers are mixed with light initiator and corresponding additives into sticky "ink" and the material is cured through ultraviolet light. With this technology, the team was able to create vertical or spiral substructures inside the printed filament, extending the existing printing details to smaller details than the "voxels '."</h5>
-           
 
             <h3>Try to read gcode</h3>
-            <p>
-                <h4></h4>
-              
-                <h5>Two layers of three-dimensional graphics are created in modeling software and exported in STL format.</h5> 
-            </p>
-            <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/44a528adc97cb954ac5df44d768b197.png" class="paper-image" alt="pic">
-            <p>
-              <h4></h4>
-              <h5>Drag the exported STL file into Cura 3D software.
-                
-                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/5f7be2896f6681331530a44628187f6.png" class="paper-image" alt="pic">
-                <p></p>
-                Select the gcode export file.
-               
-                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/e5ac5a71a47ad846f73f15293458b1f.png" class="paper-image" alt="pic">
-                <p></p>
-                A G-code file (usually with a.gcode extension) is an instruction file used to control devices such as CNC machine tools and 3D printers. It is a general-purpose computer numerical control (CNC) programming language that stores a series of instructions in text that instruct a machine how to perform operations, such as moving, cutting, drilling or, in the case of 3D printing, melting and depositing materials.
+                <p>
+                    <h4></h4>
+                  
+                    <h5>Two layers of three-dimensional graphics are created in modeling software and exported in STL format.</h5> 
+                </p>
+                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/44a528adc97cb954ac5df44d768b197.png" class="paper-image" alt="pic">
+                <p>
+                  <h4></h4>
+                  <h5>Drag the exported STL file into Cura 3D software.
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/5f7be2896f6681331530a44628187f6.png" class="paper-image" alt="pic">
+                    <p></p>
+                    Select the gcode export file.
+                   
+                    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/e5ac5a71a47ad846f73f15293458b1f.png" class="paper-image" alt="pic">
+                    <p></p>
+                    A G-code file (usually with a.gcode extension) is an instruction file used to control devices such as CNC machine tools and 3D printers. It is a general-purpose computer numerical control (CNC) programming language that stores a series of instructions in text that instruct a machine how to perform operations, such as moving, cutting, drilling or, in the case of 3D printing, melting and depositing materials.
 
 Specific to 3D printing, G-code files are created from designs in 3D modeling software (common ones such as. STL or.obj format) imported into slicing software (such as Cura, Slic3r, or Simplify3D). The slicing software splits the 3D model into a series of thin layers and generates detailed printing instructions for each layer, including parameters such as the nozzle's moving path, speed, temperature, and extrusion amount. These instructions are organized into lines of G-code commands, with each line representing a specific action or setting.
-                
-                <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/24cbb93ccbef7c80fdaca1277b1cc59.png" class="paper-image" alt="pic">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/2061c110ba87b2fe7af92345470eaa9.png" class="paper-image" alt="pic">
+                    <p></p>
+                    Simulate the path of 3D printing on the modeling software.Lines 42 through 711 are the print path for the first layer.
+               
+            
+                    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/1e44f9596736f1e592063b917e66ebf.png" class="paper-image" alt="pic">
+                    <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/d462d85556be78082d3aeae2de2ab61.png" class="paper-image" alt="pic">
+                 <p>
+              
+                  <h4></h4>
                 <p></p>
-                Simulate the path of 3D printing on the modeling software.
-           
-        
-              <img src="https://cdn.jsdelivr.net/gh/Cashewwwww/00/img/f58ecef0a035798fe1b180c46886c8a.png" class="paper-image" alt="pic">
-             <p>
-          
-              <h4></h4>
-            <p></p>
+
 
 
 
