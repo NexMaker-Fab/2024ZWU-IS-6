@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="project management.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入prism.js的样式文件 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- 选择你喜爱的主题，可以到prism.js的官网更换不同的主题 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+</head>
+<body>
+    <a href="index.html" class="corner-link top-left">Menu</a>
+    <a href="see all p.html" class="corner-link top-right">Back</a>
+    <div class="paper">
+        <div class="text">
+            <h2>IOT Example
+                <p>
+                    <h4>
+                        Fitbit is a well-known wearable health tracking device that can track and record user activity levels, such as the number of steps taken, the number of floors taken, the distance run, and the length of activity. 
+                         In addition, it can also track the user's heart rate, sleep quality, and even the physiological cycle of women.
+                         <h4>Step1: Data collection: <h5>The wristband uses an accelerometer(detect the user's movement, including speed and direction, for step counting or motion pattern recognition),Optical heart rate monitor (real-time monitoring of heart rate by detecting the user's blood flow through flashing LED light),Gyroscopes and magnetometers (monitoring the user's direction and rotation, generally used to detect the user's movement pattern),Sleep monitor (combining exercise and heart rate data to recognize the user's sleep patterns),Altimeter (using air pressure information to detect the user's altitude, used to track the data of the user climbing stairs)Sensor data such as ambient light sensor (detecting the lighting conditions of the surrounding environment and adjusting the brightness of the display screen according to the ambient light) .
+                            <h4>Step2: Data transmission: <h5>The wristband sends collected data to paired devices via Bluetooth, and the connected devices will upload the received data to Fitbit's cloud server through a network connection (mobile data or Wi Fi). 
+                                <h4>Step3: Data processing and analysis: <h5>In cloud servers, these raw data will be further processed and analyzed, transformed into understandable information, such as sleep cycles, daily activity status, etc. The data processing process may include steps such as denoising, filtering, modeling, and algorithm analysis to achieve more accurate and interpretable results. 
+                                    <h4>Step4: Data visualization: <h5>The processed data will be presented in the form of graphics and reports on the Fitbit application. Users can view and understand various indicators in the application, including heart rate change curves, sleep stage distribution, exercise trends, etc.5. Data interpretation: In addition to displaying data, Fitbit also provides explanations and suggestions to help users understand the significance of this data and how to improve their health status.
+                </p> <img src="https://github.com/xiixiiiii/xiix/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240624103609.jpg?raw=true"class="paper-image" alt="pic">
+
+  <div id="particles-js"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<!-- 不要忘记引入C++语言的高亮插件 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+<!-- 加载粒子库 -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- 配置和运行粒子效果 -->
+<script>  
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 30, density: { enable: true, value_area: 800 } }, //将粒子数量更改为100
+            color: { value: '#ffaa00' },
+            shape: { type: 'circle' },
+            opacity: { 
+                value: 0.5, 
+                random: true, 
+                anim: { 
+                    enable: true, // 开启动态改变透明度
+                    speed: 1, // 闪烁速度，数值越高，闪烁频率越高
+                    opacity_min: 0.1, 
+                    sync: false 
+                } 
+            },
+            size: { 
+                value: 6, // 改变粒子最大尺寸
+                random: true, // 尺寸随机
+                anim: { enable: true, speed: 3, size_min: 2} // 开启动态改变尺寸
+            },
+            line_linked: { enable: false },
+            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 } }
+        },
+        retina_detect: true
+    });
+    const mousePointer = document.createElement('div');
+    mousePointer.className = 'mouse-pointer';
+    document.body.appendChild(mousePointer);
+  
+    window.addEventListener('mousemove', function (e) {
+      mousePointer.style.left = `${e.pageX}px`;
+      mousePointer.style.top = `${e.pageY}px`;
+    });
+    
+    const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+    
+    links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+      link.addEventListener('mouseenter', () => {
+        mousePointer.classList.add('large');
+      });
+      link.addEventListener('mouseleave', () => {
+        mousePointer.classList.remove('large');
+      });
+    });
+    
+    links.forEach(link => { 
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('mouse-pointer-large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('mouse-pointer-large');
+    });
+  });
+  
+
+
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+<!-- 调用highlight.js初始化函数 -->
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
+
