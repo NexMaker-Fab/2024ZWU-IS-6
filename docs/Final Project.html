@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="FInal Project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入prism.js的样式文件 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- 选择你喜爱的主题，可以到prism.js的官网更换不同的主题 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+</head>
+<body>
+    <a href="index.html" class="corner-link top-left">Menu</a>
+    <a href="see all p.html" class="corner-link top-right">Back</a>
+    <div class="paper">
+        <div class="text">
+          <h2>Final Project
+            <p></p>
+      <p><img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/fe44fc6102682a59df15e5a32521f16.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/c8df61a3f2f3617ea106d1281d0fc9b.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/f07b02b66613cabd556ef9ecbe7642a.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/ab08e95c6686202d4c0a00a1eeacf52.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/5f2796a820d7e10b5507020a677eb89.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/1c495cb08c0950782ec875462875bea.png"class="paper-image" alt="pic">
+        <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/73814137301d838e1cdf4ed64360bf7.png"class="paper-image" alt="pic">
+  <div id="particles-js"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<!-- 不要忘记引入C++语言的高亮插件 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+<!-- 加载粒子库 -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- 配置和运行粒子效果 -->
+<script>  
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 30, density: { enable: true, value_area: 800 } }, //将粒子数量更改为100
+            color: { value: '#ffaa00' },
+            shape: { type: 'circle' },
+            opacity: { 
+                value: 0.5, 
+                random: true, 
+                anim: { 
+                    enable: true, // 开启动态改变透明度
+                    speed: 1, // 闪烁速度，数值越高，闪烁频率越高
+                    opacity_min: 0.1, 
+                    sync: false 
+                } 
+            },
+            size: { 
+                value: 6, // 改变粒子最大尺寸
+                random: true, // 尺寸随机
+                anim: { enable: true, speed: 3, size_min: 2} // 开启动态改变尺寸
+            },
+            line_linked: { enable: false },
+            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 600 } }
+        },
+        retina_detect: true
+    });
+    const mousePointer = document.createElement('div');
+    mousePointer.className = 'mouse-pointer';
+    document.body.appendChild(mousePointer);
+  
+    window.addEventListener('mousemove', function (e) {
+      mousePointer.style.left = `${e.pageX}px`;
+      mousePointer.style.top = `${e.pageY}px`;
+    });
+    
+    const links = document.querySelectorAll('a');  /* 选择所有超链接 */
+    
+    links.forEach(link => { /* 对每个链接添加鼠标移入和移出事件 */
+      link.addEventListener('mouseenter', () => {
+        mousePointer.classList.add('large');
+      });
+      link.addEventListener('mouseleave', () => {
+        mousePointer.classList.remove('large');
+      });
+    });
+    
+    links.forEach(link => { 
+    link.addEventListener('mouseenter', () => {
+      mousePointer.classList.add('mouse-pointer-large');
+    });
+    link.addEventListener('mouseleave', () => {
+      mousePointer.classList.remove('mouse-pointer-large');
+    });
+  });
+  
+
+
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+<!-- 调用highlight.js初始化函数 -->
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
+
