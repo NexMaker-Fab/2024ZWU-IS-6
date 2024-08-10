@@ -28,9 +28,20 @@
         <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/5f2796a820d7e10b5507020a677eb89.png"class="paper-image" alt="pic">
         <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/1c495cb08c0950782ec875462875bea.png"class="paper-image" alt="pic">
         <img src="https://cdn.jsdelivr.net/gh/y20522/image-cloud/img/73814137301d838e1cdf4ed64360bf7.png"class="paper-image" alt="pic">
+        <h4>Our final video:
+          <div id="linkContainer"></div>
   <div id="particles-js"></div>
 
 
+  <script>
+    const linkText = "点击此处B站链接查看";
+    const linkUrl = "https://www.bilibili.com/video/BV1578peREqv/?spm_id_from=333.999.0.0&vd_source=3ae6d18a0db73cb6098822fde2899916";
+    const linkContainer = document.getElementById('linkContainer');
+    const aTag = document.createElement('a');
+    aTag.href = linkUrl;
+    aTag.innerHTML = linkText;
+    linkContainer.appendChild(aTag);
+  </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
 <!-- 不要忘记引入C++语言的高亮插件 -->
